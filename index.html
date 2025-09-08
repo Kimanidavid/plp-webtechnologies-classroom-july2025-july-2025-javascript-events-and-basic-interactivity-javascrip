@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Shopping Cart</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>🛒 My Shopping Cart</h1>
+
+  <div class="products">
+    <div class="product">
+      <img src="https://images.pexels.com/photos/4611657/pexels-photo-4611657.jpeg?_gl=1*evd25n*_ga*NzM1MjEyNzAzLjE3NTQxNjUyNzc.*_ga_8JE65Q40S6*czE3NTY0OTkyNTAkbzMkZzEkdDE3NTY0OTkzNTQkajE2JGwwJGgw" alt="Sweatpants $20">
+      <p>Sweat Pants - $20</p>
+      <button onclick="addItem(20)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://images.pexels.com/photos/30981657/pexels-photo-30981657.jpeg?_gl=1*gungg2*_ga*NzM1MjEyNzAzLjE3NTQxNjUyNzc.*_ga_8JE65Q40S6*czE3NTY0OTkyNTAkbzMkZzEkdDE3NTY0OTkzNTQkajE2JGwwJGgw" alt="Apple pods $50">
+      <p>apple pods - $50</p>
+      <button onclick="addItem(50)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg?_gl=1*15bvbh8*_ga*NzM1MjEyNzAzLjE3NTQxNjUyNzc.*_ga_8JE65Q40S6*czE3NTY0OTkyNTAkbzMkZzEkdDE3NTY0OTk1NzAkajU5JGwwJGgw" alt="Sneakers $100">
+      <p>Sneakers - $100</p>
+      <button onclick="addItem(100)">Add to Cart</button>
+    </div>
+  </div>
+
+  <h2>🧾 Items in Cart:</h2>
+  <ul id="cart-items"></ul>
+
+  <p id="total">Total: $0</p>
+  <p id="message"></p>
+
+  <!--forms-->
+<form id="promo-form">
+    <input type="text" id="promo-code" placeholder="Enter promo code">
+    <button type="submit">Apply</button>
+</form>
+
+<form id="details-form">
+    <input type="email" id="email" name="email" placeholder="Email" required>
+    <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+    <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+    <input type="text" id="address" name="address" placeholder="Address" required>
+    <button type="submit">Submit Details</button>
+</form>
+
+  <!-- Checkout button -->
+  <button id="checkout-btn" onclick="checkout()">✅ Checkout</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
